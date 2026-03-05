@@ -3,9 +3,10 @@ import { Routes, Route, Navigate } from "react-router-dom";
 
 // Pages
 import Login from "@/pages/Login";
+import DashboardLayout from "@/pages/DashboardLayout";
 
 
-/* Dashboard Home  */
+/* Dashboard Home */
 function DashboardHome({ user }) {
   return (
     <div className="w-[1100px] mx-auto px-4 sm:px-6 lg:px-8 py-6 space-y-6">
@@ -38,7 +39,14 @@ export default function App() {
 
   return (
     <Routes>
+      {/* Redirect root → dashboard */}
       <Route path="/" element={<Navigate to="/dashboard" replace />} />
+
+      {/* Dashboard layout */}
+      <Route
+        path="/dashboard"
+        element={<DashboardLayout user={user} />}
+      />
     </Routes>
   );
 }
