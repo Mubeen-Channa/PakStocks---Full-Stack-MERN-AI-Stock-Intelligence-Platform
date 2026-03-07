@@ -4,6 +4,7 @@ import { Routes, Route, Navigate } from "react-router-dom";
 // Pages
 import Login from "@/pages/Login";
 import DashboardLayout from "@/pages/DashboardLayout";
+import Alerts from "@/pages/Alerts";
 
 
 /* Dashboard Home */
@@ -42,11 +43,13 @@ export default function App() {
       {/* Redirect root → dashboard */}
       <Route path="/" element={<Navigate to="/dashboard" replace />} />
 
-      {/* Dashboard layout */}
+      {/* Dashboard layout with nested routes */}
       <Route
         path="/dashboard"
         element={<DashboardLayout user={user} />}
-      />
+      >
+        <Route path="set-targets" element={<Alerts />} />
+      </Route>
     </Routes>
   );
 }
