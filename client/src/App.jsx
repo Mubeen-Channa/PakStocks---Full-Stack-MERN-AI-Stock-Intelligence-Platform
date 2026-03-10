@@ -5,6 +5,7 @@ import { Routes, Route, Navigate } from "react-router-dom";
 import Login from "@/pages/Login";
 import DashboardLayout from "@/pages/DashboardLayout";
 import Alerts from "@/pages/Alerts";
+import Portfolio from "@/pages/Portfolio";
 
 
 /* Dashboard Home */
@@ -49,6 +50,7 @@ export default function App() {
         element={<DashboardLayout user={user} />}
       >
         <Route path="set-targets" element={<Alerts />} />
+        <Route path="portfolio" element={<Portfolio />} />
       </Route>
     </Routes>
   );
