@@ -7,6 +7,7 @@ import DashboardLayout from "@/pages/DashboardLayout";
 import Alerts from "@/pages/Alerts";
 import Portfolio from "@/pages/Portfolio";
 import Prediction from "@/pages/Prediction";
+import News from "@/pages/News";
 
 
 /* Dashboard Home */
@@ -53,6 +54,7 @@ export default function App() {
         <Route path="set-targets" element={<Alerts />} />
         <Route path="portfolio" element={<Portfolio />} />
         <Route path="prediction" element={<Prediction />} />
+        <Route path="news" element={<News />} />  {/* Coming Soon */}
       </Route>
     </Routes>
   );
