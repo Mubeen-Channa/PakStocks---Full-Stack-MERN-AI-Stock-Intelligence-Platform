@@ -9,6 +9,8 @@ import Portfolio from "@/pages/Portfolio";
 import Prediction from "@/pages/Prediction";
 import News from "@/pages/News";
 
+// Components of Dashboard
+import KSE100Card from "@/components/KSE100Card";
 
 /* Dashboard Home */
 function DashboardHome({ user }) {
@@ -16,7 +18,9 @@ function DashboardHome({ user }) {
     <div className="w-[1100px] mx-auto px-4 sm:px-6 lg:px-8 py-6 space-y-6">
       {/* Top Row */}
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-        <div className="lg:col-span-2"></div>
+        <div className="lg:col-span-2">
+          <KSE100Card user={user} />
+        </div>
         <div className="lg:col-span-1"></div>
       </div>
 
@@ -43,10 +47,8 @@ export default function App() {
 
   return (
     <Routes>
-      {/* Redirect root → dashboard */}
       <Route path="/" element={<Navigate to="/dashboard" replace />} />
 
-      {/* Dashboard layout with nested routes */}
       <Route
         path="/dashboard"
         element={<DashboardLayout user={user} />}
@@ -54,7 +56,7 @@ export default function App() {
         <Route path="set-targets" element={<Alerts />} />
         <Route path="portfolio" element={<Portfolio />} />
         <Route path="prediction" element={<Prediction />} />
-        <Route path="news" element={<News />} />  {/* Coming Soon */}
+        <Route path="news" element={<News />} />
       </Route>
     </Routes>
   );
