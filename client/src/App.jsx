@@ -11,6 +11,7 @@ import News from "@/pages/News";
 
 // Components of Dashboard
 import KSE100Card from "@/components/KSE100Card";
+import MarketSummuryCard from "@/components/MarketSummuryCard";
 
 /* Dashboard Home */
 function DashboardHome({ user }) {
@@ -21,7 +22,9 @@ function DashboardHome({ user }) {
         <div className="lg:col-span-2">
           <KSE100Card user={user} />
         </div>
-        <div className="lg:col-span-1"></div>
+        <div className="lg:col-span-1">
+          <MarketSummuryCard />
+        </div>
       </div>
 
       {/* Bottom Row */}
