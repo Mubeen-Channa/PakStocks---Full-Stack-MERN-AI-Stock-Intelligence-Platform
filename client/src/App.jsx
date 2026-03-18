@@ -12,6 +12,7 @@ import News from "@/pages/News";
 // Components of Dashboard
 import KSE100Card from "@/components/KSE100Card";
 import MarketSummuryCard from "@/components/MarketSummuryCard";
+import WatchlistCard from "@/components/WatchlistCard";
 
 /* Dashboard Home */
 function DashboardHome({ user }) {
@@ -29,7 +30,9 @@ function DashboardHome({ user }) {
 
       {/* Bottom Row */}
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 items-start">
-        <div className="lg:col-span-2"></div>
+        <div className="lg:col-span-2">
+          <WatchlistCard />
+        </div>
         <div className="lg:col-span-1"></div>
       </div>
     </div>
