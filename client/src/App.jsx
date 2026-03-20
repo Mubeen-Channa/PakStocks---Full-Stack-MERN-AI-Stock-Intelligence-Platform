@@ -13,8 +13,9 @@ import News from "@/pages/News";
 import KSE100Card from "@/components/KSE100Card";
 import MarketSummuryCard from "@/components/MarketSummuryCard";
 import WatchlistCard from "@/components/WatchlistCard";
+import TopMoversCard from "@/components/TopMoversCard";
 
-/* Dashboard Home */
+/* ---------------- Dashboard Home ---------------- */
 function DashboardHome({ user }) {
   return (
     <div className="w-[1100px] mx-auto px-4 sm:px-6 lg:px-8 py-6 space-y-6">
@@ -33,7 +34,9 @@ function DashboardHome({ user }) {
         <div className="lg:col-span-2">
           <WatchlistCard />
         </div>
-        <div className="lg:col-span-1"></div>
+        <div className="lg:col-span-1">
+          <TopMoversCard />
+        </div>
       </div>
     </div>
   );
@@ -59,10 +62,11 @@ export default function App() {
         path="/dashboard"
         element={<DashboardLayout user={user} />}
       >
+        <Route index element={<DashboardHome user={user} />} />
         <Route path="set-targets" element={<Alerts />} />
         <Route path="portfolio" element={<Portfolio />} />
         <Route path="prediction" element={<Prediction />} />
-        <Route path="news" element={<News />} />
+        <Route path="news" element={<News />} />  {/* Coming Soon */}
       </Route>
     </Routes>
   );
