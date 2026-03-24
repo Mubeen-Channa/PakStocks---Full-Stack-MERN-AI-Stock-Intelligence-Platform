@@ -3,11 +3,13 @@ import { Routes, Route, Navigate } from "react-router-dom";
 
 // Pages
 import Login from "@/pages/Login";
+
 import DashboardLayout from "@/pages/DashboardLayout";
 import Alerts from "@/pages/Alerts";
 import Portfolio from "@/pages/Portfolio";
 import Prediction from "@/pages/Prediction";
 import News from "@/pages/News";
+
 
 // Components of Dashboard
 import KSE100Card from "@/components/KSE100Card";
@@ -15,7 +17,7 @@ import MarketSummuryCard from "@/components/MarketSummuryCard";
 import WatchlistCard from "@/components/WatchlistCard";
 import TopMoversCard from "@/components/TopMoversCard";
 
-/* ---------------- Dashboard Home ---------------- */
+/* Dashboard Home */
 function DashboardHome({ user }) {
   return (
     <div className="w-[1100px] mx-auto px-4 sm:px-6 lg:px-8 py-6 space-y-6">
@@ -56,8 +58,10 @@ export default function App() {
 
   return (
     <Routes>
+      {/* Redirect root → dashboard */}
       <Route path="/" element={<Navigate to="/dashboard" replace />} />
 
+      {/* Dashboard layout with nested pages */}
       <Route
         path="/dashboard"
         element={<DashboardLayout user={user} />}
