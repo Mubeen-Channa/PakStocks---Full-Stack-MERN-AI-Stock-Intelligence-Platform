@@ -4,6 +4,7 @@ import cors from "cors";
 import { errorHandler } from "./middlewares/errorHandler.js";
 
 import authRoutes from "./routes/auth.routes.js";
+import indicesRoutes from "./routes/indices.routes.js";
 
 const app = express();
 
@@ -34,6 +35,7 @@ app.use((req, res, next) => {
 
 // ROUTES
 app.use("/api/auth", authRoutes);
+app.use("/api/indices", indicesRoutes);
 
 // health check
 app.get("/health", (req, res) => {
