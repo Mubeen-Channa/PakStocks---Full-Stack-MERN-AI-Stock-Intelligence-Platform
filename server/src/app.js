@@ -5,6 +5,7 @@ import { errorHandler } from "./middlewares/errorHandler.js";
 
 import authRoutes from "./routes/auth.routes.js";
 import indicesRoutes from "./routes/indices.routes.js";
+import watchlistRoutes from "./routes/watchlist.routes.js";
 
 const app = express();
 
@@ -36,6 +37,7 @@ app.use((req, res, next) => {
 // ROUTES
 app.use("/api/auth", authRoutes);
 app.use("/api/indices", indicesRoutes);
+app.use("/api/watchlist", watchlistRoutes);
 
 // health check
 app.get("/health", (req, res) => {
