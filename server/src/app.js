@@ -9,6 +9,7 @@ import watchlistRoutes from "./routes/watchlist.routes.js";
 import stockValuesRoutes from "./routes/stocksValues.routes.js";
 import alertRoutes from "./routes/alerts.routes.js";
 import portfolioRoutes from "./routes/portfolio.routes.js";
+import historyRoutes from "./routes/history.routes.js";
 
 const app = express();
 
@@ -44,6 +45,7 @@ app.use("/api/watchlist", watchlistRoutes);
 app.use("/api/stockvalues", stockValuesRoutes);
 app.use("/api/alerts", alertRoutes);
 app.use("/api/portfolio", portfolioRoutes);
+app.use("/api/history", historyRoutes);
 
 // health check
 app.get("/health", (req, res) => {
