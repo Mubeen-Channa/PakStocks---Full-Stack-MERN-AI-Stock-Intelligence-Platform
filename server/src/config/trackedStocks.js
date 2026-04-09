@@ -1,0 +1,22 @@
+// KSE 100 Stocks List
+export const TRACKED_STOCKS = [
+  "ABL","ABOT","AGP","AICL","AIRLINK","AKBL","APL","ARL","AVN",
+  "BAFL","BAHL","BOP","BNWM","BWCL",
+  "CEPB","CHCC","CNERGY","COLG",
+  "DCR","DGKC","DHPL",
+  "ENGRO","EFERT",
+  "FATIMA","FCCL","FFC","FFL","FABL","FHAM",
+  "GADT","GAL", "GHGL","GLAXO","GHNI",
+  "HBL","HMB","HUMNL","HINOON","HUBC","HALEON","HCAR","HGFA",
+  "IBFL","INDU","ILP","INIL","ISL",
+  "JVDC","JDWS",
+  "KEL","KOHC","KTML","KAPCO",
+  "LOTCHEM","LUCK","LCI",
+  "MLCF","MARI","MCB","MEBL","MEHT","MTL","MUGHAL",
+  "NBP","NATF","NRL","NESTLE",
+  "OGDC",
+  "PKGS","PAEL","PGLC","PKGP","PABC","PIBTL","POL","PRL","PPL","PSEL","PSO","PTC","PTCL","PIOC","POML",
+  "RMPL",
+  "SAPL","SEARL","SRVI","SHEL","SHFA","SCBPL","SNGP","SYS","SAZEW","SSGC",
+  "TGL","THALL","TRG","UPFL","UBL","UNITY","YOUW"
+];
